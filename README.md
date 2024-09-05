@@ -30,27 +30,7 @@ pcheck -i INPUT_FILE -o OUTPUT_FILE [-u TEST_URL] [-t TIMEOUT]
 ```
 
 
-## Building yourself
-### Requirements
-
-- Python 3.7 or higher
-- `aiohttp` library
-
-You can install the required library using pip:
-
-```sh
-pip install aiohttp
-```
-
-### Usage
-
-To run the script, use the following command:
-
-```sh
-python3 checker.py -i INPUT_FILE -o OUTPUT_FILE [-u TEST_URL] [-t TIMEOUT]
-```
-
-### Command-Line Arguments
+## Command-Line Arguments
 ```
     -i, --input: Path to the input file containing proxies. Each proxy should be on a new line.
     -o, --output: Path to the output file where working proxies will be saved.
@@ -64,7 +44,6 @@ To test proxies listed in proxies.txt, save working proxies to working_proxies.t
 
 ```sh
 pcheck -i proxies.txt -o working_proxies.txt -u http://example.com -t 10
-python3 checker.py -i proxies.txt -o working_proxies.txt -u http://example.com -t 10
 ```
 
 ## Proxy Format
