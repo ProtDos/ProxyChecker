@@ -12,7 +12,26 @@ This Python script tests a list of proxies to determine which ones are working a
 - Saves working proxies to a specified output file.
 - Provides real-time progress updates on the command line.
 
+
 ## Requirements
+
+- Python 3.7 or higher
+- `pip` library
+
+You can install the required library using pip:
+
+```sh
+pip install pcheck
+```
+
+## Usage
+```sh
+pcheck -i INPUT_FILE -o OUTPUT_FILE [-u TEST_URL] [-t TIMEOUT]
+```
+
+
+## Building yourself
+### Requirements
 
 - Python 3.7 or higher
 - `aiohttp` library
@@ -23,7 +42,7 @@ You can install the required library using pip:
 pip install aiohttp
 ```
 
-## Usage
+### Usage
 
 To run the script, use the following command:
 
@@ -31,7 +50,7 @@ To run the script, use the following command:
 python3 checker.py -i INPUT_FILE -o OUTPUT_FILE [-u TEST_URL] [-t TIMEOUT]
 ```
 
-## Command-Line Arguments
+### Command-Line Arguments
 ```
     -i, --input: Path to the input file containing proxies. Each proxy should be on a new line.
     -o, --output: Path to the output file where working proxies will be saved.
@@ -44,6 +63,7 @@ python3 checker.py -i INPUT_FILE -o OUTPUT_FILE [-u TEST_URL] [-t TIMEOUT]
 To test proxies listed in proxies.txt, save working proxies to working_proxies.txt, and test against http://example.com with a timeout of 10 seconds:
 
 ```sh
+pcheck -i proxies.txt -o working_proxies.txt -u http://example.com -t 10
 python3 checker.py -i proxies.txt -o working_proxies.txt -u http://example.com -t 10
 ```
 
